@@ -1,0 +1,6 @@
+{
+    "entropy_method": "coefficient",
+    "alpha": 0.6835656786572504,
+    "tau": 0.009822813728486016,
+    "learning_rate": 0.009601928475724051
+}

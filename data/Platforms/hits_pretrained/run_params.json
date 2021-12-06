@@ -1,0 +1,14 @@
+{
+    "n_steps": 5000000,
+    "max_runtime": 60000.0,
+    "test_frequency": 40,
+    "n_test_episodes": 20,
+    "env": "Platforms-v1",
+    "worker_class": "DefaultGraphRLWorker",
+    "run_metric_params": {
+        "name": "average_success_run_metric",
+        "after_step": 2000000.0
+    },
+    "torch_num_threads": 1,
+    "model_save_frequency": 1000000
+}

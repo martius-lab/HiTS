@@ -1,0 +1,44 @@
+{
+    "algorithm": "HAC",
+    "n_layers": 1,
+    "subtask_spec_factory": "PendulumHACSubtaskSpecFactory",
+    "level_params_list": [
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": [
+                        -1.975662905972703,
+                        -0.0,
+                        0.0008955315448266771
+                    ],
+                    "gamma": 0.99,
+                    "tau": 0.0002649889535474845
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 256,
+                "grad_steps_per_env_step": 1.0,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0008955315448266771,
+                "hidden_layers": [
+                    32,
+                    32
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": -1,
+                "constant_failure_return": false,
+                "learn_goal_ach_thresholds": false,
+                "goal_tol_rew": 2.0
+            }
+        }
+    ]
+}

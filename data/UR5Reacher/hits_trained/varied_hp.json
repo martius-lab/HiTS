@@ -1,0 +1,9 @@
+{
+    "goal_sampling_strategy": "episode",
+    "alpha0": 0.0005317222522776922,
+    "entropy_method1": "target",
+    "target_entropy1": -13.223820062136808,
+    "tau": 0.027263311954991754,
+    "learning_rate": 0.0004968380769591525,
+    "w_delta_t_ach": 4.346941556517667
+}

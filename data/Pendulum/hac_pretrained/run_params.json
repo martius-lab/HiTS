@@ -1,0 +1,15 @@
+{
+    "n_steps": 300000,
+    "max_runtime": 60000.0,
+    "n_runs": 4,
+    "test_frequency": 5,
+    "n_test_episodes": 20,
+    "env": "PendulumHAC-v1",
+    "worker_class": "DefaultGraphRLWorker",
+    "run_metric_params": {
+        "name": "average_success_run_metric",
+        "after_step": 0.0
+    },
+    "torch_num_threads": 1,
+    "model_save_frequency": 200000
+}

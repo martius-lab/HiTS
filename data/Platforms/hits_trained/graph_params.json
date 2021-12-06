@@ -1,0 +1,76 @@
+{
+    "algorithm": "HiTS",
+    "n_layers": 2,
+    "subtask_spec_factory": "PlatformsSubtaskSpecFactory",
+    "level_params_list": [
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 0.004189083521541997,
+                    "gamma": 0.99,
+                    "tau": 0.021421017364015173
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 512,
+                "grad_steps_per_env_step": 0.5,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 20000
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0001940204674106782,
+                "hidden_layers": [
+                    32,
+                    32
+                ],
+                "squash_critics": false
+            },
+            "subtask_spec_params": {
+                "delta_t_max": -1,
+                "goal_achievement_threshold": 0.05,
+                "learn_goal_ach_thresholds": false,
+                "power_aux_reward": false,
+                "power_aux_reward_factor": 1.0
+            }
+        },
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 1.1172711243974338,
+                    "gamma": 0.97,
+                    "tau": 0.021421017364015173,
+                    "reward_normalization": false
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 512,
+                "grad_steps_per_env_step": 0.5,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 20000
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0001940204674106782,
+                "hidden_layers": [
+                    32,
+                    32
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": 10,
+                "constant_failure_return": false,
+                "goal_achievement_threshold": 0.5,
+                "learn_goal_ach_thresholds": false,
+                "goal_tol_rew": 2.0,
+                "weight_delta_t_ach_aux": 0.05323384864151526
+            }
+        }
+    ]
+}

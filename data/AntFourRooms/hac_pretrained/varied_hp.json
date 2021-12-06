@@ -1,0 +1,11 @@
+{
+    "tau": 0.0017099210322824967,
+    "learning_rate0": 0.0016522388287908045,
+    "learning_rate1": 0.0012914986468859806,
+    "goal_sampling_strategy1": "future",
+    "entropy_method0": "coefficient",
+    "alpha0": 0.048725212881249286,
+    "entropy_method1": "target",
+    "target_entropy1": -4.797017801945987,
+    "max_n_actions": 17
+}

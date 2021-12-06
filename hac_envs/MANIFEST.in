@@ -1,0 +1,4 @@
+include hac_envs/ant_environments/ant_four_rooms_3_levels/mujoco_files/*.xml
+include hac_envs/mujoco_files/*.xml
+include hac_envs/mujoco_files/common/*.xml
+include hac_envs/mujoco_files/muj_gripper/*.stl

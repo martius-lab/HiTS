@@ -1,0 +1,17 @@
+{
+    "n_steps": 1200000,
+    "max_runtime": 60000.0,
+    "n_runs": 4,
+    "test_frequency": 20,
+    "n_test_episodes": 10,
+    "env": "AntFourRooms-v1",
+    "worker_class": "DefaultGraphRLWorker",
+    "success_reward": 0.0,
+    "run_metric_params": {
+        "name": "average_success_run_metric",
+        "after_step": 0.0
+    },
+    "trial_metric": "average",
+    "torch_num_threads": 1,
+    "model_save_frequency": 500000
+}

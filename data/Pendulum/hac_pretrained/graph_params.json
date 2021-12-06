@@ -1,0 +1,77 @@
+{
+    "algorithm": "HAC",
+    "n_layers": 2,
+    "subtask_spec_factory": "PendulumHACSubtaskSpecFactory",
+    "level_params_list": [
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 9.59335085594554e-05,
+                    "gamma": 0.99,
+                    "tau": 0.016975014722561594
+                },
+                "goal_sampling_strategy": "episode",
+                "batch_size": 256,
+                "grad_steps_per_env_step": 1.0,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0017074162269884135,
+                "hidden_layers": [
+                    32,
+                    32
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": -1,
+                "goal_achievement_threshold": [
+                    0.16580627893946132,
+                    0.6
+                ],
+                "learn_goal_ach_thresholds": false,
+                "power_aux_reward": false,
+                "power_aux_reward_factor": 1.0
+            }
+        },
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 0.371509078758707,
+                    "gamma": 0.99,
+                    "tau": 0.016975014722561594
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 256,
+                "grad_steps_per_env_step": 1.0,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0017074162269884135,
+                "hidden_layers": [
+                    32,
+                    32
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": 27,
+                "constant_failure_return": false,
+                "learn_goal_ach_thresholds": false,
+                "goal_tol_rew": 2.0
+            }
+        }
+    ]
+}

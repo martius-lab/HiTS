@@ -1,0 +1,9 @@
+{
+    "tau": 0.016975014722561594,
+    "learning_rate": 0.0017074162269884135,
+    "entropy_method0": "coefficient",
+    "alpha0": 9.59335085594554e-05,
+    "entropy_method1": "coefficient",
+    "alpha1": 0.371509078758707,
+    "max_n_actions": 27
+}

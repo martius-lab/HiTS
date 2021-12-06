@@ -1,0 +1,7 @@
+{
+    "tau": 0.06666254950362992,
+    "learning_rate": 0.0021674075513788984,
+    "goal_sampling_strategy": "episode",
+    "entropy_method0": "coefficient",
+    "alpha0": 0.005156473026976162
+}

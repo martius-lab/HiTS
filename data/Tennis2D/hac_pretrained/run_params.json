@@ -1,0 +1,17 @@
+{
+    "n_steps": 30000000,
+    "max_runtime": 1380.0,
+    "n_runs": 4,
+    "test_frequency": 20,
+    "n_test_episodes": 20,
+    "env": "Tennis2D-v1",
+    "worker_class": "DefaultGraphRLWorker",
+    "run_metric_params": {
+        "name": "average_success_run_metric",
+        "after_step": 5000000.0
+    },
+    "trial_metric": "average",
+    "torch_num_threads": 1,
+    "model_save_frequency": 200000,
+    "seed": 511824
+}

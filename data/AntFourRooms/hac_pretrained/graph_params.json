@@ -1,0 +1,86 @@
+{
+    "algorithm": "HAC",
+    "n_layers": 2,
+    "subtask_spec_factory": "AntFourRoomsSubtaskSpecFactory",
+    "level_params_list": [
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 0.048725212881249286,
+                    "gamma": 0.99,
+                    "tau": 0.0017099210322824967
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 1024,
+                "grad_steps_per_env_step": 0.07,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0016522388287908045,
+                "hidden_layers": [
+                    64,
+                    64,
+                    64
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": 27,
+                "goal_achievement_threshold": [
+                    0.4,
+                    0.4,
+                    0.2,
+                    0.8,
+                    0.8
+                ],
+                "learn_goal_ach_thresholds": false,
+                "power_aux_reward": false,
+                "power_aux_reward_factor": 1.0
+            }
+        },
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": [
+                        -4.797017801945987,
+                        -5.0,
+                        0.0012914986468859806
+                    ],
+                    "gamma": 0.97,
+                    "tau": 0.0017099210322824967
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 1024,
+                "grad_steps_per_env_step": 0.07,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 0.0012914986468859806,
+                "hidden_layers": [
+                    64,
+                    64,
+                    64
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": 17,
+                "constant_failure_return": false,
+                "learn_goal_ach_thresholds": false,
+                "goal_tol_rew": 2.0
+            }
+        }
+    ]
+}

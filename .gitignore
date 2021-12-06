@@ -1,0 +1,7 @@
+*.nfs*
+*.swp
+__pycache__
+*.egg-info
+venv/
+*/build/
+*.csv

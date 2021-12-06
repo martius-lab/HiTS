@@ -1,0 +1,6 @@
+{
+    "tau": 0.0002649889535474845,
+    "learning_rate": 0.0008955315448266771,
+    "entropy_method0": "target",
+    "target_entropy0": -1.975662905972703
+}

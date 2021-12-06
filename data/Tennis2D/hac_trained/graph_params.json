@@ -1,0 +1,86 @@
+{
+    "algorithm": "HAC",
+    "n_layers": 2,
+    "subtask_spec_factory": "Tennis2DSubtaskSpecFactory",
+    "level_params_list": [
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": 0.000290525610826535,
+                    "gamma": 0.99,
+                    "tau": 0.0006278189122439302
+                },
+                "goal_sampling_strategy": "future",
+                "batch_size": 1024,
+                "buffer_size_factor": 0.5,
+                "grad_steps_per_env_step": 0.1,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0
+            },
+            "model_kwargs": {
+                "learning_rate": 6.912838713354646e-05,
+                "hidden_layers": [
+                    64,
+                    64,
+                    64
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": -1,
+                "goal_achievement_threshold": {
+                    "angle_threshold": 0.2,
+                    "angular_vel_threshold": 0.2
+                },
+                "learn_goal_ach_thresholds": false,
+                "power_aux_reward": false,
+                "power_aux_reward_factor": 1.0
+            }
+        },
+        {
+            "algo_kwargs": {
+                "flat_algo_name": "SAC",
+                "flat_algo_kwargs": {
+                    "alpha": [
+                        -10.018439493020761,
+                        -1.0,
+                        6.912838713354646e-05
+                    ],
+                    "gamma": 0.97,
+                    "tau": 0.0006278189122439302
+                },
+                "goal_sampling_strategy": "Tennis2DGSS",
+                "batch_size": 1024,
+                "grad_steps_per_env_step": 0.1,
+                "n_hindsight_goals": 3,
+                "testing_fraction": 0.3,
+                "fully_random_fraction": 0.05,
+                "bootstrap_testing_transitions": true,
+                "learning_starts": 0,
+                "buffer_size_factor": 0.1666
+            },
+            "model_kwargs": {
+                "learning_rate": 6.912838713354646e-05,
+                "hidden_layers": [
+                    64,
+                    64,
+                    64
+                ],
+                "squash_critics": false,
+                "force_negative": true
+            },
+            "subtask_spec_params": {
+                "max_n_actions": 8,
+                "constant_failure_return": false,
+                "learn_goal_ach_thresholds": false,
+                "goal_tol_rew": 2.0
+            },
+            "interruption_policy": "tennis_2d_ip"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "tau": 0.0032896680452229494,
+    "learning_rate0": 0.002403633468693659,
+    "goal_sampling_strategy0": "future",
+    "entropy_method0": "target",
+    "target_entropy0": -7.936534273488739
+}
