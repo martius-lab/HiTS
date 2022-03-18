@@ -1,6 +1,6 @@
 # Hierarchical reinforcement learning with Timed Subgoals (HiTS)
 
-This repository contains code for reproducing experiments from [our paper "Hierarchical reinforcement learning with Timed Subgoals"](https://proceedings.neurips.cc/paper/2021/hash/b59c21a078fde074a6750e91ed19fb21-Abstract.html). The implementation of the *Hierarchical reinforcement learning with Timed Subgoals* (HiTS) algorithm can be found in the [Graph-RL repository](https://github.com/nicoguertler/graph_rl). 
+This repository contains code for reproducing experiments from [our paper "Hierarchical reinforcement learning with Timed Subgoals"](https://proceedings.neurips.cc/paper/2021/hash/b59c21a078fde074a6750e91ed19fb21-Abstract.html). The implementation of the *Hierarchical reinforcement learning with Timed Subgoals* (HiTS) algorithm can be found in the [Graph-RL repository](https://github.com/nicoguertler/graph_rl). A short [video presentation](https://youtu.be/JkPaI3uZU6c) summarizes the algorithm as well as our experiments.
 
 HiTS enables sample-efficient learning in sparse-reward, long-horizong tasks. In particular, it extends subgoal-based hierarchical reinforcement learning to environments with dynamic elements which are, most of the time, beyond the control of the agent. Due to the use of timed subgoals and hindsight action relabeling the higher level sees transitions that are consistent with a stationary effective environment. As a result both levels in the hierarchy can learn concurrently and efficiently.
 
@@ -56,6 +56,10 @@ python -m scripts.run.render --algo hits --env Platforms --newly_trained --stoch
 ```
 
 Hyperparameters and seeds can be found in the `graph_params.json` files in the `data` directory. The key `level_params_list` contains a list of the hyperparameters of all levels, starting with the lowest level.
+
+## Results
+
+How HiTS outperforms baselines in dynamic environments can be seen in [this video](https://youtu.be/JkPaI3uZU6c?t=287).
 
 ## How to cite
 
