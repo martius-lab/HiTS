@@ -12,5 +12,6 @@
         "after_step": 100000.0
     },
     "torch_num_threads": 1,
-    "model_save_frequency": 1000000
+    "model_save_frequency": 1000000,
+    "seed": 434866
 }
