@@ -14,5 +14,6 @@
     "trial_metric": "average",
     "torch_num_threads": 1,
     "model_save_frequency": 500000,
+    "success_reward": 0.0,
     "seed": 3859
 }

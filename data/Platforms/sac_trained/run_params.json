@@ -11,5 +11,6 @@
     },
     "torch_num_threads": 1,
     "model_save_frequency": 1000000,
+    "success_reward": 0.0,
     "seed": 526111
 }

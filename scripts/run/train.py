@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    assert args.algo in {"hits", "hac", "sac"}
+    assert args.algo in {"hits", "hits_no_budget", "hac", "sac"}
     assert args.env in {"AntFourRooms", "Drawbridge", "Pendulum", "Platforms", 
             "Tennis2D", "UR5Reacher"}
     

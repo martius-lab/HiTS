@@ -57,6 +57,36 @@ python -m scripts.run.render --algo hits --env Platforms --newly_trained --stoch
 
 Hyperparameters and seeds can be found in the `graph_params.json` files in the `data` directory. The key `level_params_list` contains a list of the hyperparameters of all levels, starting with the lowest level.
 
+### Tensorboard
+
+To enable tensoboard logs, add the key
+
+```json
+"tensorboard_log": true
+```
+
+to the `run_params.json` file in the subdirectory of `data` corresponding to the desired environment. The tensorboard logs include returns, success rates, Q-values, number of actions used on each level before reaching the goal etc.
+
+### Plotting 
+
+Some quantities like returns and success rates are also logged in CSV files stored in the `data/*/log` directories. To plot them to PDFs, run
+
+```bash
+python -m scripts.plot.plot_training data/Environment/algo_trained/
+```
+
+with the desired environment and algorithm. The output files are written to `data/Environment/algo_trained/plots`.
+
+Note that the logged return corresponds to the cumulative reward up to the point when the episode ended, either because the goal was reached, the environment timed out or the action budget of the higher level was exhausted. If the action budget of the higher level is finite, the return is therefore not a good indicator for learning progress. If the reward is negative, then the return might be high at the beginning of training because the subgoal budget is exhausted quickly. 
+
+However, HiTS can be run without a finite subgoal budget. To run HiTS with this setting on Platforms, execute
+
+```bash
+python -m scripts.run.train --algo hits_no_budget --env Platforms
+```
+
+The logged returns will then be easier to interpret.
+
 ## Results
 
 How HiTS outperforms baselines in dynamic environments can be seen in [this video](https://youtu.be/JkPaI3uZU6c?t=287).
